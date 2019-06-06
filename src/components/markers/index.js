@@ -3,16 +3,16 @@ import React from 'react';
 import Marker from '../marker';
 
 const renderMarkers = (markers, map) =>
-  markers.map(({ title, lat, lng, id }) =>
+  markers.map(({ title, latitude, longitude, pk }) =>
     React.cloneElement(
       <Marker />, {
-        id,
+        pk,
         title,
-        key: id,
+        key: pk,
         map,
         google: window.google,
-        lat,
-        lng,
+        latitude,
+        longitude
       })
   );
 

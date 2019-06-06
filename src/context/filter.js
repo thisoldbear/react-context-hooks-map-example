@@ -1,17 +1,25 @@
 import React, { createContext, useReducer } from 'react';
 
-export const MarkersContext = createContext();
+export const FilterContext = createContext();
 
 const initialState = {
-  markers: [],
+  ff_funded: false,
+  postcode: '',
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'SET_MARKERS':
+
+    case 'SET_FF_FUNDED_FILTER':
       return {
         ...state,
-        markers: action.payload
+        ff_funded: action.payload
+      };
+
+    case 'SET_POSTCODE_FILTER':
+      return {
+        ...state,
+        postcode: action.payload
       };
 
     default:
@@ -23,13 +31,13 @@ export default ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <MarkersContext.Provider
+    <FilterContext.Provider
       value={{
         state,
         dispatch
       }}
     >
       {children}
-    </MarkersContext.Provider>
+    </FilterContext.Provider>
   );
 };
