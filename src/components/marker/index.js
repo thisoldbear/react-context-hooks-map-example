@@ -1,10 +1,9 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect } from "react";
 
 const Marker = ({ map, google, lat, lng, title, id }) => {
   const marker = useRef(null);
 
   useEffect(() => {
-
     console.warn(`Rendered ${id}`);
 
     const position = new google.maps.LatLng(lat, lng);
@@ -16,7 +15,7 @@ const Marker = ({ map, google, lat, lng, title, id }) => {
       title
     });
 
-    marker.current.addListener('click', () => {
+    marker.current.addListener("click", () => {
       alert(`Marker ${id} ${title}`);
     });
 
@@ -25,10 +24,10 @@ const Marker = ({ map, google, lat, lng, title, id }) => {
       console.error(`Removed ${id}`);
 
       marker.current.setMap(null);
-    }
-  }, [lat, lng, title, id]);
+    };
+  }, [lat, lng, title, id, map, google.maps.LatLng, google.maps.Marker]);
 
   return null;
-}
+};
 
 export default Marker;
