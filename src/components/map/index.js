@@ -1,8 +1,8 @@
-import React, { useRef, useContext, useEffect, useState } from "react";
-import renderMarkers from "../markers";
+import React, { useRef, useContext, useEffect, useState } from 'react';
+import renderMarkers from '../markers';
 
-import { MarkersContext } from "../../context/markers";
-import { MapContext } from "../../context/map";
+import { MarkersContext } from '../../context/markers';
+import { MapContext } from '../../context/map';
 
 const Map = () => {
   const { markers } = useContext(MarkersContext);

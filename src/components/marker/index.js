@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect } from 'react';
 
 const Marker = ({ map, google, lat, lng, title, id }) => {
   const marker = useRef(null);
@@ -15,7 +15,7 @@ const Marker = ({ map, google, lat, lng, title, id }) => {
       title
     });
 
-    marker.current.addListener("click", () => {
+    marker.current.addListener('click', () => {
       alert(`Marker ${id} ${title}`);
     });
 

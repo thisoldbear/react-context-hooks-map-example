@@ -9,7 +9,7 @@ export default ({ children }) => {
     <MarkersContext.Provider
       value={{
         markers,
-        setMarkers,
+        setMarkers
       }}
     >
       {children}

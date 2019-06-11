@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 
-import useScript from "../../utils/use-script";
+import useScript from '../../utils/use-script';
 
-import Map from "../map";
+import Map from '../map';
 
 const MapLoader = () => {
   const [loaded, error] = useScript(

@@ -12,9 +12,8 @@ const App = () => (
       <div className="app">
         <MapWrapper />
       </div>
-    </ MarkersContextProvider>
+    </MarkersContextProvider>
   </MapContextProvider>
 );
-
 
 export default App;
