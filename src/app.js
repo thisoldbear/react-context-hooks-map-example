@@ -16,10 +16,9 @@ const App = () => (
           <Filters />
           <MapWrapper />
         </div>
-      </ FilterContextProvider>
-    </ MarkersContextProvider>
+      </FilterContextProvider>
+    </MarkersContextProvider>
   </MapContextProvider>
 );
-
 
 export default App;

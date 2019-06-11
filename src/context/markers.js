@@ -3,7 +3,7 @@ import React, { createContext, useReducer } from 'react';
 export const MarkersContext = createContext();
 
 const initialState = {
-  markers: [],
+  markers: []
 };
 
 const reducer = (state, action) => {
@@ -17,7 +17,7 @@ const reducer = (state, action) => {
     default:
       throw new Error();
   }
-}
+};
 
 export default ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
