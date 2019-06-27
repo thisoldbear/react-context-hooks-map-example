@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 
 let cachedScripts = [];
 
-const useScript = (src) => {
+const useScript = src => {
   // Keeping track of script loaded and error state
   const [state, setState] = useState({
     loaded: false,
@@ -66,6 +66,6 @@ const useScript = (src) => {
   );
 
   return [state.loaded, state.error];
-}
+};
 
 export default useScript;

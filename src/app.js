@@ -21,5 +21,4 @@ const App = () => (
   </MapContextProvider>
 );
 
-
 export default App;
