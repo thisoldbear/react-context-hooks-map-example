@@ -9,21 +9,17 @@ const MapWrapper = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await fetch(
-        'data.json',
-      )
+      await fetch('data.json')
         .then(resp => resp.json())
         .then(({ sites }) => {
-          dispatch({ type: 'SET_MARKERS', payload: sites })
-        })
-    }
+          dispatch({ type: 'SET_MARKERS', payload: sites });
+        });
+    };
 
     fetchData();
-  }, []);
+  }, [dispatch]);
 
-  return (
-    <MapLoader />
-  );
+  return <MapLoader />;
 };
 
 export default MapWrapper;

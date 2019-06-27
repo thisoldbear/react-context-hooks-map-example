@@ -25,7 +25,7 @@ const Marker = ({ map, google, lat, lng, title, id }) => {
 
       marker.current.setMap(null);
     };
-  }, [lat, lng, title, id]);
+  }, [lat, lng, title, id, google.maps.LatLng, google.maps.Marker, map]);
 
   return null;
 };
